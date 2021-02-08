@@ -12,8 +12,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
-        <spring-boot.version>2.3.8.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <spring-boot.version>2.3.3.RELEASE</spring-boot.version>
         <druid.version>1.1.14</druid.version>
         <pagehelper.boot.version>1.2.12</pagehelper.boot.version>
         <mybatis.plus.version>3.0.7.1</mybatis.plus.version>
@@ -60,6 +60,11 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.40</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

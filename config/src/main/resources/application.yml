@@ -1,11 +1,19 @@
 server:
-  port: 8081
+  port: 9091
 spring:
   application:
     name: cloud-config
 eureka:
   client:
-    serviceUrl:
-      defaultZone: http://localhost:8080/eureka/      #服务注册中信地址
+    service-url:
+      defaultZone: http://localhost:9090/eureka/      #服务注册中信地址
   instance:
     prefer-ip-address: true         #将IP注册到服务注册中心
+# 配置存储地址(git)
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yanglinfeng11111/springCloudConfig.git #地址
+          search-paths: springCloudConfig  # 存储文件夹
+          label:master #分支

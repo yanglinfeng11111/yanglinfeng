@@ -12,7 +12,6 @@
     <name>client</name>
     <description>Demo project for Spring Boot</description>
 
-
     <groupId>com.cloud</groupId>
     <artifactId>client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -38,8 +37,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!--用户认证-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
     </dependencies>
-
 
     <build>
         <plugins>

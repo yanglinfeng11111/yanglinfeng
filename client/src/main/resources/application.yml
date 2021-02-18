@@ -1,13 +1,17 @@
 server:
-  port: 8080
+  port: 9090
 spring:
   application:
     name: cloud-client
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8080/eureka/      #服务注册中信地址
-      fetch-registry: false
-      #表示是否向eureka注册服务，即在自己的eureka中注册自己，默认为true，此处应该设置为false；
   instance:
+    hostname: localhost #eureka服务端的实例名称
     prefer-ip-address: true         #将IP注册到服务注册中心
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #服务注册中信地址
+
+
+

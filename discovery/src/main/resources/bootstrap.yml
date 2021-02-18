@@ -1,0 +1,16 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka/
+  instance:
+    instanceId: cloud-discovery
+    preferIpAddress: true
+server:
+  port: 9092
+spring:
+  cloud:
+    config:
+      name: cloud-discovery
+      profile: local
+      uri: https://github.com/yanglinfeng11111/springCloudConfig.git
+      label: master

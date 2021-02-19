@@ -8,9 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.cloud</groupId>
+
     <artifactId>config</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+
 
     <!-- 工程名称和描述 -->
     <name>config</name>

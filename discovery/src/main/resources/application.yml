@@ -2,11 +2,4 @@ server:
   port: 9092
 spring:
   application:
-    name: cloud-discovery   #服务名称,自定义
-            #指定该Eureka实例的端口
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:9090/eureka/      #服务注册中信地址
-  instance:
-    prefer-ip-address: true         #将IP注册到服务注册中心
+    name: cloud-discovery

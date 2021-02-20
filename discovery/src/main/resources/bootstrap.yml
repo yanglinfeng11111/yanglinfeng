@@ -5,12 +5,16 @@ eureka:
   instance:
     instanceId: cloud-discovery
     preferIpAddress: true
-server:
-  port: 9092
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 spring:
   cloud:
     config:
-      name: cloud-discovery
       profile: local
-      uri: https://github.com/yanglinfeng11111/springCloudConfig.git
-      label: master
+      discovery:
+        enabled: true
+        service-id: cloud-config

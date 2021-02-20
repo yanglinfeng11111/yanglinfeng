@@ -1,19 +1,24 @@
 server:
   port: 9091
-spring:
-  application:
-    name: cloud-config
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:9090/eureka/      #·şÎñ×¢²áÖĞĞÅµØÖ·
+      defaultZone: http://localhost:9090/eureka/
   instance:
-    prefer-ip-address: true         #½«IP×¢²áµ½·şÎñ×¢²áÖĞĞÄ
-# ÅäÖÃ´æ´¢µØÖ·(git)
+    prefer-ip-address: true
+spring:
+  application:
+    name: cloud-config
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/yanglinfeng11111/springCloudConfig.git #µØÖ·
-          search-paths: springCloudConfig  # ´æ´¢ÎÄ¼ş¼Ğ
-          label:master #·ÖÖ§
+          uri: https://github.com/yanglinfeng11111/springCloudConfig
+          search-paths: '{application}' # å­˜å‚¨æ–‡ä»¶å¤¹
+
+# æš´éœ²ç›‘æ§ç«¯ç‚¹
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
